@@ -1,0 +1,24 @@
+<div class="LogInContent">
+    <div class="container">
+        <div class="login-card">
+          <h1 class="title">Welcome Back</h1>
+          <form class="form">
+            <div class="input-group">
+              <label for="UserName">UserName</label>
+              <input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" placeholder="Enter your UserName">
+            </div>
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password">
+            </div>
+            <button type="submit" class="submit-btn " (click)="checkLogIn()">Log In</button>
+          </form>
+          <div *ngIf="notExistEmail" class="error-message" style="color: red;">{{ errorMsg }}</div>
+
+          <p class="signup-text">  Don't have an account? </p>
+            <div class="SignUp-Btn">
+            <button (click)="MoveToSignUp()">Sign up</button>
+        </div>
+      </div>
+    </div>
+    </div>
