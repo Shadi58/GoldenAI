@@ -1,20 +1,15 @@
 <div class="signup-container">
   <h1 class="title">Create Your GoldenAI Account</h1>
-  <form>
+  <form (ngSubmit)="saveUser()">
     <div class="input-group">
       <label for="username">Username</label>
-      <input type="text" id="username" placeholder="Enter your username" required>
-    </div>
-    <div class="input-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="text" [(ngModel)]="newUsername" id="username" [ngModelOptions]="{standalone: true}" placeholder="Enter your username" required>
     </div>
     <div class="input-group">
       <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Enter your password" required>
+      <input type="password" [(ngModel)]="newpassword" id="password" [ngModelOptions]="{standalone:true}" placeholder="Enter your password" required>
     </div>
     <button type="submit" class="submit-btn">Sign Up</button>
   </form>
   <p class="login-text">Already have an account?</p>
 </div>
-<button (click)="MoveToLogin()">login</button>
